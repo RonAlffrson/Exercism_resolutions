@@ -52,11 +52,8 @@ def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
     """
     lost = not power_pellet_active and touching_ghost
 
-    if has_eaten_all_dots:
-        if not lost:
-            return True
-        else:
-            return False
+    if has_eaten_all_dots and not lost:
+        return True
     else:
         return False
 
